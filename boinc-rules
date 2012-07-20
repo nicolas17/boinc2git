@@ -1,9 +1,31 @@
 create repository boinc
 end repository
 
-match /trunk/boinc/(openssl|curl|icu)/mswin/
+# skip compiled binaries
+match /trunk/boinc/(openssl|curl|icu|zlib)/(mswin|win32)/
+end match
+match /trunk/boinc/coprocs/(CUDA|NVIDIA)/(mswin|linux|posix)/
+end match
+match /trunk/boinc/clientscr/progress/win/
+end match
+match /trunk/boinc/clientscr/progress/boincscr.exe
+end match
+match /trunk/boinc/samples/example_app/bin/
+end match
+match /trunk/boinc/samples/wrapper/(bin|i386|ppc|x86_64)/
+end match
+match /trunk/boinc/samples/redist/
 end match
 
+match /trunk/boinc/win_build/boinc_installshield.zip
+end match
+match /trunk/boinc/bonc.tar.gz
+end match
+match /trunk/boinc/client/win/dbghelp.dll
+end match
+
+
+# trunk branch
 match /trunk/boinc/
     repository boinc
     branch master
