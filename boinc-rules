@@ -38,5 +38,11 @@ match /trunk/boinc_samples/
     branch samples
 end match
 
+# Charlie's workspace for AsyncRPC work
+match /workspaces/charlief/
+    repository boinc
+    branch charlief/asyncrpc
+end match
+
 match /
 end match
