@@ -1,0 +1,14 @@
+create repository boinc
+end repository
+
+match /trunk/boinc/(openssl|curl|icu)/mswin/
+end match
+
+match /trunk/boinc/
+    repository boinc
+    branch master
+    min revision 10
+end match
+
+match /
+end match
