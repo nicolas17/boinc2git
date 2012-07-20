@@ -32,5 +32,11 @@ match /trunk/boinc/
     min revision 10
 end match
 
+# sample apps, moved to trunk later
+match /trunk/boinc_samples/
+    repository boinc
+    branch samples
+end match
+
 match /
 end match
