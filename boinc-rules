@@ -44,5 +44,23 @@ match /workspaces/charlief/
     branch charlief/asyncrpc
 end match
 
+# these were created with cp trunk/boinc/ branches/.../boinc/
+match /branches/boinc_core_release_5_(2|4|6|8|8a)/$
+    action recurse
+end match
+match /branches/boinc_core_release_5_(2|4|6|8|8a)/boinc/
+    repository boinc
+    branch core_5.\1
+end match
+# these were created with cp trunk/boinc/ branches/.../
+match /branches/boinc_core_release_5_(10)/
+    repository boinc
+    branch core_5.\1
+end match
+match /branches/boinc_core_release_6_(2|4|6|6a)/
+    repository boinc
+    branch core_6.\1
+end match
+
 match /
 end match
