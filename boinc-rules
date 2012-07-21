@@ -1,10 +1,14 @@
 create repository boinc
 end repository
 
+# matches trunk/boinc and branches/whatever/[boinc/]
+# doesn't have slash at beginning or end
+declare TRUNK_OR_BRANCHES=(?:trunk/boinc|branches/[^/]+(?:/boinc)?)
+
 # skip compiled binaries
-match /trunk/boinc/(openssl|curl|icu|zlib)/(mswin|win32)/
+match /${TRUNK_OR_BRANCHES}/(openssl|curl|icu|zlib)/(mswin|win32)/
 end match
-match /trunk/boinc/coprocs/(CUDA|NVIDIA)/(mswin|linux|posix)/
+match /${TRUNK_OR_BRANCHES}/coprocs/(CUDA|NVIDIA)/(mswin|linux|posix)/
 end match
 match /trunk/boinc/clientscr/progress/win/
 end match
