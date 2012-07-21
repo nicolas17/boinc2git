@@ -66,5 +66,19 @@ match /branches/boinc_core_release_6_(2|4|6|6a)/
     branch core_6.\1
 end match
 
+# 6.8 was created in r18219, deleted in r18416 and recreated in r18417
+# so it needs special handling.
+match /branches/boinc_core_release_6_8/
+    repository boinc
+    branch core_6.8_old
+    min revision 18219
+    max revision 18415 # deleted in 18416
+end match
+match /branches/boinc_core_release_6_8/
+    repository boinc
+    branch core_6.8
+    min revision 18417
+end match
+
 match /
 end match
