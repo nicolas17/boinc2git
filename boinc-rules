@@ -61,7 +61,7 @@ match /branches/boinc_core_release_5_(10)/
     repository boinc
     branch core_5.\1
 end match
-match /branches/boinc_core_release_6_(2|4|6|6a)/
+match /branches/boinc_core_release_6_(2|4|6|6a|10|12)/
     repository boinc
     branch core_6.\1
 end match
