@@ -48,7 +48,9 @@ match /workspaces/charlief/
     branch charlief/asyncrpc
 end match
 
-# these were created with cp trunk/boinc/ branches/.../boinc/
+# These were created by copying trunk/ to branches/boinc_core_release_x_y,
+# so they have a 'boinc' subdirectory. Thus I need an extra recurse rule
+# to get the contents.
 match /branches/boinc_core_release_5_(2|4|6|8|8a)/$
     action recurse
 end match
@@ -56,7 +58,9 @@ match /branches/boinc_core_release_5_(2|4|6|8|8a)/boinc/
     repository boinc
     branch core_5.\1
 end match
-# these were created with cp trunk/boinc/ branches/.../
+
+# 5.10 and later were created by copying trunk/boinc to branches/boinc_core_release_x_y,
+# so there's no boinc subdir here.
 match /branches/boinc_core_release_5_(10)/
     repository boinc
     branch core_5.\1
