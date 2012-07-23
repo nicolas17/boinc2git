@@ -112,7 +112,7 @@ end match
 # post-CVS
 match /tags/boinc_core_release_(\d+)_(\d+)_(\d+)/
     repository boinc
-    branch refs/tags/\1.\2.\3
+    branch refs/tags/v\1.\2.\3
     annotated true
     min revision 12368
 end match
