@@ -10,10 +10,10 @@ match /${TRUNK_OR_BRANCHES}/(openssl|curl|icu|zlib)/(mswin|win32)/
 end match
 match /${TRUNK_OR_BRANCHES}/coprocs/(CUDA|NVIDIA)/(mswin|linux|posix)/
 end match
-match /trunk/boinc/clientscr/progress/win/
-end match
-match /trunk/boinc/clientscr/progress/boincscr.exe
-end match
+# match /trunk/boinc/clientscr/progress/win/
+# end match
+# match /trunk/boinc/clientscr/progress/boincscr.exe
+# end match
 match /trunk/boinc/samples/example_app/bin/
 end match
 match /trunk/boinc/samples/wrapper/(bin|i386|ppc|x86_64)/
