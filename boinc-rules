@@ -88,5 +88,34 @@ match /branches/boinc_core_release_6_8/
     min revision 18417
 end match
 
+# Like branches, tags in CVS contained a 'boinc' subdirectory.
+# After the SVN move, the tags were created from 'boinc' directly
+# and don't have such a subdir.
+# 12367 is the last revision coming from CVS.
+match /tags/([^/]+)/$
+    action recurse
+    max revision 12367
+end match
+match /tags/boinc_core_release_(\d+)_(\d+)/boinc/
+    repository boinc
+    branch refs/tags/v\1.\2
+    annotated true
+    max revision 12367
+end match
+match /tags/boinc_core_release_(\d+)_(\d+)_(\d+)/boinc/
+    repository boinc
+    branch refs/tags/v\1.\2.\3
+    annotated true
+    max revision 12367
+end match
+
+# post-CVS
+match /tags/boinc_core_release_(\d+)_(\d+)_(\d+)/
+    repository boinc
+    branch refs/tags/\1.\2.\3
+    annotated true
+    min revision 12368
+end match
+
 match /
 end match
