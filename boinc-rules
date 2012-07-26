@@ -14,8 +14,8 @@ end match
 # end match
 # match /trunk/boinc/clientscr/progress/boincscr.exe
 # end match
-match /trunk/boinc/samples/example_app/bin/
-end match
+#match /trunk/boinc/samples/example_app/bin/
+#end match
 match /trunk/boinc/samples/wrapper/(bin|i386|ppc|x86_64)/
 end match
 match /trunk/boinc/samples/redist/
