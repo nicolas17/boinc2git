@@ -51,13 +51,13 @@ end match
 # Didactylos's workspace
 match /workspaces/didactylos/
     repository boinc
-    branch didactylos_v1
+    branch didactylos/WiX
     min revision 12406
     max revision 14084 # wiped in 14085
 end match
 match /workspaces/didactylos/
     repository boinc
-    branch didactylos_v2
+    branch didactylos/manager
     min revision 14087
 end match
 
