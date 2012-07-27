@@ -3,7 +3,7 @@ end repository
 
 # matches trunk/boinc and branches/whatever/[boinc/]
 # doesn't have slash at beginning or end
-declare TRUNK_OR_BRANCHES=(?:trunk/boinc|branches/[^/]+(?:/boinc)?)
+declare TRUNK_OR_BRANCHES=(?:trunk/boinc|branches/[^/]+(?:/boinc)?|workspaces/didactylos)
 
 # skip compiled binaries
 match /${TRUNK_OR_BRANCHES}/(openssl|curl|icu|zlib)/(mswin|win32)/
