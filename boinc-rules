@@ -48,6 +48,19 @@ match /workspaces/charlief/
     branch charlief/asyncrpc
 end match
 
+# Didactylos's workspace
+match /workspaces/didactylos/
+    repository boinc
+    branch didactylos_v1
+    min revision 12406
+    max revision 14084 # wiped in 14085
+end match
+match /workspaces/didactylos/
+    repository boinc
+    branch didactylos_v2
+    min revision 14087
+end match
+
 # These were created by copying trunk/ to branches/boinc_core_release_x_y,
 # so they have a 'boinc' subdirectory. Thus I need an extra recurse rule
 # to get the contents.
