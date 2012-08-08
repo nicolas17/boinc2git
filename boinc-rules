@@ -61,6 +61,39 @@ match /workspaces/didactylos/
     min revision 14087
 end match
 
+# John McLeod's workspace
+# I decided to only convert the third "chunk" of history,
+# since the rest have stuff that was never merged to trunk.
+
+# match /workspaces/jm7/
+#     repository boinc
+#     branch jm7-1
+#     min revision 12410
+#     max revision 13328 # wiped in 13329
+# end match
+match /workspaces/jm7/$
+    min revision 14076
+    action recurse
+end match
+# match /workspaces/jm7/boinc/
+#     repository boinc
+#     branch jm7-2
+#     min revision 14076
+#     max revision 14716 # wiped in 14717
+# end match
+match /workspaces/jm7/boinc/
+    repository boinc
+    branch jm7-3
+    min revision 14718
+    max revision 15060 # wiped in 15061
+end match
+# match /workspaces/jm7/boinc/
+#     repository boinc
+#     branch jm7-4
+#     min revision 15062
+#     max revision 16314 # wiped in 16315
+# end match
+
 # These were created by copying trunk/ to branches/boinc_core_release_x_y,
 # so they have a 'boinc' subdirectory. Thus I need an extra recurse rule
 # to get the contents.
