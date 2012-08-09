@@ -211,5 +211,6 @@ match /tags/boinc_core_release_(\d+)_(\d+)_(\d+a?)/
 end match
 # END release tags
 
-match /
-end match
+include exclude-rules
+# match /
+# end match

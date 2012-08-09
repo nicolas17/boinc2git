@@ -1,0 +1,141 @@
+# These are rules ignoring things that we are *not* converting.
+# Including this file instead of using a catch-all "match /"
+# lets us make sure we're converting everything, since things that aren't being
+# exported in the main rule file and aren't explicitly ignored here either,
+# will make svn-all-fast-export abort with a fatal error.
+
+
+# BEGIN to be converted later
+match /workspaces/kadam/
+end match
+match /workspaces/jbk/
+end match
+match /workspaces/flcosta/
+end match
+match /workspaces/wxListCtrl/
+end match
+match /workspaces/BOINCNewsFeed/
+end match
+match /workspaces/christianb/
+end match
+match /branches/server_stable_6_2/
+end match
+match /branches/server_stable/
+end match
+match /branches/boinc_core_release_6_10_36_a/
+end match
+match /branches/boinc_core_release_6_8_(26|27|28)/ # convert these as tags
+end match
+match /tags/(boinc_app_release_[^/]+)/
+end match
+match /tags/(boinc_release_[^/]+)/
+end match
+# END
+
+# BEGIN for other repos
+match /trunk/boinc_scenarios/
+end match
+match /trunk/boinc_stats/
+end match
+match /trunk/boinc_alpha/
+end match
+match /trunk/bolt_examples/
+end match
+match /trunk/BoincLite/
+end match
+match /trunk/boinc_depends_win_vs(2005|2008|2010)/
+end match
+match /branches/boinc_depends_win_vs(2005|2008|2010)_6_(8|10|12)/
+end match
+match /trunk/boinc_depends_win_vs(2005|2008|2010)_7_(0)/
+end match
+match /branches/boinc_depends_win_vs(2005|2008|2010)_7_(0|0a)/
+end match
+match /trunk/depends_projects/ # dunno if this will get converted or not
+end match
+# END
+
+# BEGIN stuff that I won't convert
+match /tags/(start|SCHEDULER_V1|seti_boinc_[^/]+)/
+end match
+match /branches/vendor/
+end match
+match /branches/unlabeled-1
+end match
+match /trunk/CVSROOT/
+end match
+match /branches/setiathome-4_all_platforms_beta/
+    # branch creation is a cvs2svn mess,
+    # all commits here are in trunk as well
+end match
+match /branches/staging/
+    # quite a mess, most commits delete stuff...
+end match
+match /branches/(boinc_server_2_28_1|unlimited_stderr_out|Pegasus)/
+    # no commits here, only branch creation
+end match
+match /tags/boinc_server_2_28_2/
+    # TODO why not?
+end match
+# massive cvs2svn cleanup
+match /
+    min revision 12368
+    max revision 12371
+end match
+match /tags/checkin_notes/
+end match
+match /tags/boinc_core_release_5_3_17_PreMenuChange/
+end match
+# This workspace was never used.
+match /workspaces/mifistor/
+    min revision 12449
+    max revision 12449
+end match
+# Nothing useful here
+match /workspaces/dkondo/
+end match
+
+# BEGIN Workspace deletions when wiping them to resync
+match /workspaces/jm7/
+    min revision 13329
+    max revision 14075
+end match
+match /workspaces/jm7/
+    min revision 14717
+    max revision 14717
+end match
+match /workspaces/jm7/
+    min revision 15061
+    max revision 15061
+end match
+match /workspaces/jm7/
+    min revision 16315
+    max revision 16315
+end match
+# readdition of workspace, but was never modified
+match /workspaces/jm7/
+    min revision 16316
+    max revision 16316
+end match
+match /workspaces/fweiler/
+    min revision 13397
+    max revision 13400
+end match
+match /workspaces/didactylos/
+    min revision 14085
+    max revision 14086
+end match
+# END workspace deletions
+
+# deletion of branch (before recreation)
+match /branches/boinc_core_release_6_8/
+    min revision 18416
+    max revision 18416
+end match
+# This was misnamed
+match /trunk/server_stable/
+end match
+# binaries in workspace; never modified
+match /workspaces/fweiler/boinc_depends_win_vs2010/
+end match
+# END
