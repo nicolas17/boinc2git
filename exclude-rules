@@ -6,8 +6,6 @@
 
 
 # BEGIN to be converted later
-match /workspaces/kadam/
-end match
 match /workspaces/jbk/
 end match
 match /workspaces/flcosta/

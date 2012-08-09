@@ -149,6 +149,13 @@ match /workspaces/wxListCtrl/
 end match
 # END
 
+# BEGIN kadam workspace
+match /workspaces/kadam/
+    repository boinc
+    branch kadam
+end match
+# END
+
 # BEGIN version branches
 # These were created by copying trunk/ to branches/boinc_core_release_x_y,
 # so they have a 'boinc' subdirectory. Thus I need an extra recurse rule
