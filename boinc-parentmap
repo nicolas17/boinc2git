@@ -15,3 +15,16 @@
 
 # merge from jm7-3 to trunk
 14719 14723
+
+# merges from trunk to fweiler's workspace
+12538 12539
+12550 12551
+# This one isn't very accurate...
+13282 13283
+
+# Merge fweiler's properties dialog to trunk
+15380 15537
+
+# Merge fweiler's noproxy feature to trunk
+16055 16061
+16065 16066

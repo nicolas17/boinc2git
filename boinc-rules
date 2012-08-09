@@ -94,6 +94,66 @@ end match
 #     max revision 16314 # wiped in 16315
 # end match
 
+# Frank Weiler's workspace
+# This needs some explanation:
+# - r12448: Workspace created
+# - [...] Changes done
+# - r13396: Trunk copied to "boinc" subdir in workspace.
+# - r13397-8: Deletion of the "old" copy.
+# - r13399: Resurrection of "java" subdir, deleted in r13398.
+# - r13400: More deletion.
+# - r13401: import of r13291 which had been lost before.
+#
+# For the first "chunk" of the workspace history,
+# we need to stop before the new copy at 13396 and not later,
+# to avoid a massive boinc subdir addition
+# and because the rules for the second chunk would need it.
+
+match /workspaces/fweiler/
+    repository boinc
+    branch fweiler-1
+    max revision 13395 # we need to stop before 13396, see above
+end match
+match /workspaces/fweiler/$
+    action recurse
+    min revision 13396
+end match
+match /workspaces/fweiler/boinc/
+    repository boinc
+    branch fweiler-2
+    min revision 13396
+    max revision 15302 # deleted in r15303
+end match
+match /workspaces/fweiler/boinc/
+    repository boinc
+    branch fweiler-3
+    min revision 15304
+    max revision 16048 # deleted in r16049
+end match
+match /workspaces/fweiler/boinc/
+    repository boinc
+    branch fweiler-4
+    min revision 16050
+    max revision 16101 # deleted in r16102
+end match
+match /workspaces/fweiler/boinc/
+    repository boinc
+    branch fweiler-5
+    min revision 16103
+    max revision 19855 # deleted in r19856
+end match
+match /workspaces/fweiler/boinc/
+    repository boinc
+    branch fweiler-6
+    min revision 19857
+    max revision 22276 # deleted in r22277
+end match
+match /workspaces/fweiler/boinc/
+    repository boinc
+    branch fweiler-7
+    min revision 22278
+end match
+
 # These were created by copying trunk/ to branches/boinc_core_release_x_y,
 # so they have a 'boinc' subdirectory. Thus I need an extra recurse rule
 # to get the contents.
