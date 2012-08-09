@@ -135,6 +135,20 @@ match /workspaces/fweiler/boinc/
 end match
 # END
 
+# BEGIN wxListCtrl workspace
+match /workspaces/wxListCtrl/
+    repository boinc
+    branch wxListCtrl
+    # r15505 is the last real change
+    # r15506 merges it to trunk
+    # ...
+    # r15556 accidentally copies all of trunk into a boinc subdir
+    # r15557 deletes that subdir
+    # r15558 deletes whole workspace
+    max revision 15505
+end match
+# END
+
 # BEGIN version branches
 # These were created by copying trunk/ to branches/boinc_core_release_x_y,
 # so they have a 'boinc' subdirectory. Thus I need an extra recurse rule

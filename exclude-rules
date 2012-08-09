@@ -12,8 +12,6 @@ match /workspaces/jbk/
 end match
 match /workspaces/flcosta/
 end match
-match /workspaces/wxListCtrl/
-end match
 match /workspaces/BOINCNewsFeed/
 end match
 match /workspaces/christianb/
@@ -124,6 +122,13 @@ end match
 match /workspaces/didactylos/
     min revision 14085
     max revision 14086
+end match
+# r15556 copies all of trunk into a boinc subdir
+# r15557 deletes that subdir
+# r15558 deletes whole workspace
+match /workspaces/wxListCtrl/
+    min revision 15556
+    max revision 15558
 end match
 # END workspace deletions
 
