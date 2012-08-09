@@ -120,40 +120,12 @@ match /workspaces/fweiler/$
     action recurse
     min revision 13396
 end match
+# This rule gets everything else.
+# On deletions, svn2git will create backup tags.
 match /workspaces/fweiler/boinc/
     repository boinc
     branch fweiler-2
     min revision 13396
-    max revision 15302 # deleted in r15303
-end match
-match /workspaces/fweiler/boinc/
-    repository boinc
-    branch fweiler-3
-    min revision 15304
-    max revision 16048 # deleted in r16049
-end match
-match /workspaces/fweiler/boinc/
-    repository boinc
-    branch fweiler-4
-    min revision 16050
-    max revision 16101 # deleted in r16102
-end match
-match /workspaces/fweiler/boinc/
-    repository boinc
-    branch fweiler-5
-    min revision 16103
-    max revision 19855 # deleted in r19856
-end match
-match /workspaces/fweiler/boinc/
-    repository boinc
-    branch fweiler-6
-    min revision 19857
-    max revision 22276 # deleted in r22277
-end match
-match /workspaces/fweiler/boinc/
-    repository boinc
-    branch fweiler-7
-    min revision 22278
 end match
 # END
 
