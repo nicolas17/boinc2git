@@ -193,7 +193,7 @@ match /tags/boinc_core_release_(\d+)_(\d+)/boinc/
     infer merges true
     max revision 12367
 end match
-match /tags/boinc_core_release_(\d+)_(\d+)_(\d+)/boinc/
+match /tags/boinc_core_release_(\d+)_(\d+)_(\d+a?)/boinc/
     repository boinc
     branch refs/tags/v\1.\2.\3
     annotated true
@@ -202,7 +202,7 @@ match /tags/boinc_core_release_(\d+)_(\d+)_(\d+)/boinc/
 end match
 
 # post-CVS
-match /tags/boinc_core_release_(\d+)_(\d+)_(\d+)/
+match /tags/boinc_core_release_(\d+)_(\d+)_(\d+a?)/
     repository boinc
     branch refs/tags/v\1.\2.\3
     annotated true
