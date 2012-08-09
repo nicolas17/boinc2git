@@ -5,7 +5,7 @@ end repository
 # doesn't have slash at beginning or end
 declare TRUNK_OR_BRANCHES=(?:trunk/boinc|branches/[^/]+(?:/boinc)?|workspaces/didactylos)
 
-# skip compiled binaries
+# BEGIN skip compiled binaries
 match /${TRUNK_OR_BRANCHES}/(openssl|curl|icu|zlib)/(mswin|win32)/
 end match
 match /${TRUNK_OR_BRANCHES}/coprocs/(CUDA|NVIDIA)/(mswin|linux|posix)/
@@ -27,7 +27,7 @@ match /trunk/boinc/bonc.tar.gz
 end match
 match /trunk/boinc/client/win/dbghelp.dll
 end match
-
+# END
 
 # trunk branch
 match /trunk/boinc/
@@ -48,7 +48,7 @@ match /workspaces/charlief/
     branch charlief/asyncrpc
 end match
 
-# Didactylos's workspace
+# BEGIN Didactylos's workspace
 match /workspaces/didactylos/
     repository boinc
     branch didactylos/WiX
@@ -60,8 +60,9 @@ match /workspaces/didactylos/
     branch didactylos/manager
     min revision 14087
 end match
+# END
 
-# John McLeod's workspace
+# BEGIN John McLeod's workspace
 # I decided to only convert the third "chunk" of history,
 # since the rest have stuff that was never merged to trunk.
 
@@ -93,8 +94,9 @@ end match
 #     min revision 15062
 #     max revision 16314 # wiped in 16315
 # end match
+# END
 
-# Frank Weiler's workspace
+# BEGIN Frank Weiler's workspace
 # This needs some explanation:
 # - r12448: Workspace created
 # - [...] Changes done
@@ -153,7 +155,9 @@ match /workspaces/fweiler/boinc/
     branch fweiler-7
     min revision 22278
 end match
+# END
 
+# BEGIN version branches
 # These were created by copying trunk/ to branches/boinc_core_release_x_y,
 # so they have a 'boinc' subdirectory. Thus I need an extra recurse rule
 # to get the contents.
@@ -193,7 +197,9 @@ match /branches/boinc_core_release_6_8/
     branch core_6.8
     min revision 18417
 end match
+# END version branches
 
+# BEGIN release tags
 # Like branches, tags in CVS contained a 'boinc' subdirectory.
 # After the SVN move, the tags were created from 'boinc' directly
 # and don't have such a subdir.
@@ -225,6 +231,7 @@ match /tags/boinc_core_release_(\d+)_(\d+)_(\d+)/
     infer merges true
     min revision 12368
 end match
+# END release tags
 
 match /
 end match
