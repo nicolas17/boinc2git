@@ -8,10 +8,6 @@
 # BEGIN to be converted later
 match /workspaces/jbk/
 end match
-match /workspaces/flcosta/
-end match
-match /workspaces/BOINCNewsFeed/
-end match
 match /workspaces/christianb/
 end match
 match /branches/server_stable_6_2/
@@ -82,13 +78,11 @@ match /tags/checkin_notes/
 end match
 match /tags/boinc_core_release_5_3_17_PreMenuChange/
 end match
-# This workspace was never used.
-match /workspaces/mifistor/
-    min revision 12449
-    max revision 12449
-end match
 # Nothing useful here
 match /workspaces/dkondo/
+end match
+# no changes ever done here
+match /workspaces/(flcosta|BOINCNewsFeed|mifistor)/
 end match
 
 # BEGIN Workspace deletions when wiping them to resync
