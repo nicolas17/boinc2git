@@ -6,8 +6,6 @@
 
 
 # BEGIN to be converted later
-match /workspaces/jbk/
-end match
 match /workspaces/christianb/
 end match
 match /branches/server_stable_6_2/
@@ -83,6 +81,12 @@ match /workspaces/dkondo/
 end match
 # no changes ever done here
 match /workspaces/(flcosta|BOINCNewsFeed|mifistor)/
+end match
+# The history in this workspace is complete crap;
+# there's like 20 commits that should have been one,
+# commits #include files that are added only 5 commits later, etc.
+# If anyone cares about this BitTorrent code he can get it from SVN.
+match /workspaces/jbk/
 end match
 
 # BEGIN Workspace deletions when wiping them to resync
