@@ -45,3 +45,10 @@
 
 # merge from trunk to 7.0a
 25434 25435
+
+# merges from server_stable to trunk
+# (when bugfixes were done on both,
+# and server_stable was first)
+19508 19509
+19996 19997
+25113 25114
