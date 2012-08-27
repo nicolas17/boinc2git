@@ -156,6 +156,22 @@ match /workspaces/kadam/
 end match
 # END
 
+# BEGIN server_stable branches
+match /branches/server_stable_6_2/
+    repository boinc
+    branch refs/tags/server_stable_20080731
+    max revision 16141 # deleted in 16142
+    annotated true
+end match
+match /branches/server_stable/
+    repository boinc
+    branch refs/tags/server_stable_20081006
+    min revision 16147
+    max revision 17263 # deleted in 17264
+    annotated true
+end match
+# END
+
 # BEGIN version branches
 # These were created by copying trunk/ to branches/boinc_core_release_x_y,
 # so they have a 'boinc' subdirectory. Thus I need an extra recurse rule
