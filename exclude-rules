@@ -8,8 +8,6 @@
 # BEGIN to be converted later
 match /workspaces/christianb/
 end match
-match /branches/server_stable/
-end match
 match /branches/boinc_core_release_6_10_36_a/
 end match
 match /branches/boinc_core_release_6_8_(26|27|28)/ # convert these as tags
@@ -132,9 +130,25 @@ match /branches/boinc_core_release_6_8/
     max revision 18416
 end match
 # deletion
-match /branches/server_stable_6_2
+match /branches/server_stable_6_2/
     min revision 16142
     max revision 16142
+end match
+match /branches/server_stable/
+    min revision 17264
+    max revision 17264
+end match
+match /branches/server_stable/
+    min revision 19456
+    max revision 19456
+end match
+match /branches/server_stable/
+    min revision 22327
+    max revision 22327
+end match
+match /branches/server_stable/
+    min revision 25022
+    max revision 25022
 end match
 # This was misnamed
 match /trunk/server_stable/
