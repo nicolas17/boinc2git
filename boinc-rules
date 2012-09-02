@@ -264,6 +264,12 @@ match /tags/boinc_core_release_(\d+)_(\d+)_(\d+a?)/boinc/
     max revision 12367
 end match
 
+# ignore mistagging of 5.9.9 (twice!)
+match /tags/boinc_core_release_5_9_9/
+    min revision 12585
+    max revision 12590
+end match
+
 # post-CVS
 match /tags/boinc_core_release_(\d+)_(\d+)_(\d+a?)/
     repository boinc
